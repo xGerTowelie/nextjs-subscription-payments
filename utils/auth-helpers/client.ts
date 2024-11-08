@@ -39,7 +39,8 @@ export async function signInWithOAuth(e: React.FormEvent<HTMLFormElement>) {
         provider: provider,
         options: {
             scopes: 'openid',
-            redirectTo: "http://authtest.towelie.dev/",
+            //redirectTo: "http://authtest.towelie.dev/",
+            redirectTo: "http://supa.towelie.dev/auth/v1/callback",
         },
     });
 }
