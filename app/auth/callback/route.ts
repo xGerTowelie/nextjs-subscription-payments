@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     // URL to redirect to after sign in process completes
     return NextResponse.redirect(
         getStatusRedirect(
-            `${requestUrl.origin}/account`,
+            `http://authtest.towelie.dev/account`,
             'Success!',
             'You are now signed in.'
         )
