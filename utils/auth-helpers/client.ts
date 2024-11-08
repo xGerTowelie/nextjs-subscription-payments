@@ -38,10 +38,8 @@ export async function signInWithOAuth(e: React.FormEvent<HTMLFormElement>) {
     await supabase.auth.signInWithOAuth({
         provider: provider,
         options: {
-            redirectTo: redirectURL,
-            queryParams: {
-                scopes: 'openid'
-            },
+            scopes: 'openid',
+            redirectTo: "http://authtest.towelie.dev/auth/callback",
         },
     });
 }
